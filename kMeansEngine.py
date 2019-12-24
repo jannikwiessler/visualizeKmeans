@@ -52,7 +52,7 @@ def calcCenter(X,idx):
     return center
 
 def avgDist(C,oldC):
-    dist = calcDist(C,oldC)
+    dist = calcDist(C,oldC) # dist of every entry is always pos !
     return sum(dist)/C.shape[0]
     
 def moveCenter(X,C,idx,centersFig):
@@ -94,7 +94,7 @@ except: pass
 print('numOfSamples: '+str(numOfSamples)) 
 print('numOfCentInit: '+str(numOfCentInit))
 print('numOfLoops: '+str(loops))
-print('pauseTimer:'+str(pauseTimer))
+print('pauseTimer: '+str(pauseTimer))
 
 color = ['blue','maroon','green','cyan','magenta','grey','purple',
     'crimson','darkgreen','saddlebrown']
@@ -116,8 +116,7 @@ for i in range(loops):
     Cout[0+i*numOfCentInit:numOfCentInit+i*numOfCentInit,:] = C 
     samplesFig,centersFig,idx = colCluster(X,C,samplesFig,centersFig)
     centersFig,C,returnFLAGG, averageMove = moveCenter(X,C,idx,centersFig)
-    plt.title('Iteration: '+str(i)+' | avgCenterMove: '+str(round(averageMove,4)), 
-              fontdict=None, loc='center', pad=None)
+    plt.title('Iteration: '+str(i)+' | avgCenterMove: '+str(round(averageMove,4)), loc='center')
     plt.pause(0.000001)
     if returnFLAGG:
         break
