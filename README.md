@@ -4,8 +4,9 @@
 This is the very first shot of a python script to visualize k-means algorithm.
 
 Via terminal one can start:
-  - kMeansEngine.py: for a quick launch with default settings
-  - kMeansUI.py: for running the engine with user defined settings
+  - kMeansEngine.py: for a quick launch with default settings (use: pythonw kMeansEngine.py on mac)
+  - kMeansUI.py: for running the engine with user defined settings (use: pythonw kMeansUI.py on mac)
+  
 (As the UI is build on wxPython one need >>pythonw kMeansUI.py<< for starting the UI on mac)
   
   
