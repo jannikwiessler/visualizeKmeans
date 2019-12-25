@@ -16,3 +16,9 @@ settings:
  - number of max iterations
  - updates per second
                  
+2019-12-25:
+
+Evaluation of statistical impact of random centers start distribution on the final clusters result.
+
+Via terminal one can start:
+  - python runKMeans.py (specs to be done in script so far)
