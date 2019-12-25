@@ -8,9 +8,9 @@ import sys, os
 import wx
 import subprocess
 
-class Example(wx.Frame): 
+class UI(wx.Frame): 
     def __init__(self, parent, title): 
-        super(Example, self).__init__(parent, title = title, size = (220, 200)) 
+        super(UI, self).__init__(parent, title = title, size = (220, 200)) 
              
         self.InitUI()
         self.Centre() 
@@ -70,5 +70,5 @@ class Example(wx.Frame):
             )    
 
 app = wx.App() 
-Example(None, title = 'kMeans specs') 
+UI(None, title = 'kMeans specs') 
 app.MainLoop()
